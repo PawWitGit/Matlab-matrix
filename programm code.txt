@@ -1,0 +1,38 @@
+%zadania geometria
+
+clear, clc
+
+a = [0 2 -1]
+b = [2 -1 1]
+c = [1 3 0]
+
+alpha = 0
+
+disp(' "a" iloczyn skalarny a * b:')
+dot(a,b)
+
+disp(' "b"długość wektora c:')
+length(c)
+
+disp(' "c" kąt między wektorami a i b:')
+alpha = acos(b*c' / (norm(b)*norm(c)))
+% alpha=alpha(2,1)
+
+disp(' "d"a + b -c')
+suma = a + b - c
+
+disp(' "e" (a*c)*b - (a*b)*c')
+(dot(a,c) * b) - (dot(a,b)*c) 
+
+disp(' "f" iloczyn wektorowy a x b')
+cross(a,b)
+
+disp(' "g" iloczyn mieszany (b xx c)*a i (a xx b) * c')
+dot((cross(b,c)),a) 
+dot((cross(a,b)),c)
+
+disp(' "i" a*(b xx a)')
+dot(a,(cross(b,a)))
+
+plot(b,a)
+
